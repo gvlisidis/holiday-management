@@ -12,6 +12,7 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
+            <h3 class="mt-4">Personal Information</h3>
             <!-- Name -->
             <div>
                 <x-label for="name" :value="__('Name')" />
@@ -43,6 +44,37 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
                                 name="password_confirmation" required />
+            </div>
+
+            <!--Company Name -->
+            <div class="mt-4">
+                <x-label for="company_name" :value="__('Company Name')" />
+
+                <x-input id="company_name" class="block mt-1 w-full" type="text" name="company_name" :value="old('company_name')" required autofocus />
+            </div>
+
+                <hr>
+                <h3 class="mt-4">Create Company</h3>
+
+            <!--Company Address -->
+            <div class="mt-4">
+                <x-label for="company_address" :value="__('Company Address')" />
+
+                <x-input id="company_address" class="block mt-1 w-full" type="text" name="company_address" :value="old('company_address')" required autofocus />
+            </div>
+
+            <!--Company Postcode -->
+            <div class="mt-4">
+                <x-label for="company_postcode" :value="__('Company Postcode')" />
+
+                <x-input id="company_postcode" class="block mt-1 w-full" type="text" name="company_postcode" :value="old('company_postcode')" required autofocus />
+            </div>
+
+            <!--Company Phone -->
+            <div class="mt-4">
+                <x-label for="company_phone" :value="__('Company Phone')" />
+
+                <x-input id="company_phone" class="block mt-1 w-full" type="text" name="company_phone" :value="old('company_phone')" required autofocus />
             </div>
 
             <div class="flex items-center justify-end mt-4">
